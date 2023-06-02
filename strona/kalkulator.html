@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamila Gwiazda">
+    <title>Roślinnik - kalkulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-frytki.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="kalkulator.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+<img src="logo.svg" class="logo" alt="logo">
+<nav>
+<ul>
+    <li><a href="index.html">STRONA GŁÓWNA</a></li>
+    <li><a href="przepisy.html">PRZEPISY</a></li>
+    <li><a href="omnie.html">O MNIE</a></li>
+</ul>
+</nav>
+<img src="menu.svg" class="menu-icon" alt="menu">
+ </div>
+<h1>Kalkulator zapotrzebowania kalorycznego</h1>
+<p>Witaj!</p>
+<p>Zapraszamy do naszego kalkulatora zapotrzebowania kalorycznego. Ten narzędzie pomoże Ci określić ilość kalorii, które Twoje ciało potrzebuje codziennie, aby utrzymać wagę.</p>
+<p>Zapewnienie odpowiedniej liczby kalorii jest kluczowe dla utrzymania zdrowego stylu życia i osiągnięcia swoich celów związanych z wagą. Kalkulator uwzględnia różne czynniki, takie jak wiek, płeć, wzrost, waga, poziom aktywności fizycznej i cel.</p>
+<p>Wypełnij proszę wszystkie wymagane informacje, a nasz kalkulator dokładnie obliczy Twoje dzienne zapotrzebowanie kaloryczne. Pamiętaj, że wynik może służyć jako punkt wyjścia, a dalsze dostosowanie diety zawsze powinno być konsultowane z profesjonalistą.</p>
+<p>Jeśli Twoim celem jest przyrost masy mięśniowej lub utrata tkanki tłuszczowej, zalecamy skonsultowanie się z dietetykiem lub specjalistą ds. żywienia. Taki ekspert będzie w stanie dostosować Twoją dietę i ustalić odpowiednie zapotrzebowanie kaloryczne, uwzględniając Twoje cele oraz indywidualne czynniki, takie jak poziom aktywności fizycznej, preferencje żywieniowe i stan zdrowia.</p>
+<div class="form-container">
+<form>
+    <label for="wiek">Wiek:</label>
+    <input type="number" id="wiek" required><br><br>
+    <label for="plec">Płeć:</label>
+    <select id="plec" required>
+        <option value="" disabled selected hidden>Wybierz płeć</option>
+      <option value="M">Mężczyzna</option>
+      <option value="K">Kobieta</option>
+    </select><br><br>
+
+    <label for="waga">Waga (w kg):</label>
+    <input type="number" id="waga" required><br><br>
+
+    <label for="wzrost">Wzrost (w cm):</label>
+    <input type="number" id="wzrost" required><br><br>
+
+    <label for="aktywnosc">Poziom aktywności:</label>
+    <select id="aktywnosc" required>
+        <option value="" disabled selected hidden>Wybierz poziom aktywności</option>
+      <option value="1">Brak aktywności fizycznej</option>
+      <option value="2">Niska aktywność (praca siedząca, mało ruchu)</option>
+      <option value="3">Średnia aktywność (lekka aktywność lub praca fizyczna kilka razy w tygodniu)</option>
+      <option value="4">Wysoka aktywność (intensywna aktywność fizyczna lub praca fizyczna codziennie)</option>
+      <option value="5">Bardzo wysoka aktywność (ciężka praca fizyczna lub intensywny trening 2 razy dziennie)</option>
+    </select><br><br>
+    <label for="wynik">Zapotrzebowanie kaloryczne:</label>
+    <input type="text" id="wynik" readonly><br><br>
+    <button type="button" onclick="obliczZapotrzebowanie()">Oblicz</button>
+  </form>
+</div>
+    </div>
+</body>
+</html>
